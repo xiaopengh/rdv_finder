@@ -1,6 +1,6 @@
 # RDV Finder 
 
-**CAPTCHA Extraction and Image Processing Using Selenium and Python**
+**CAPTCHA Extraction and Image Processing Using Selenium and Transformers ViT**
 
 ## Overview
 
@@ -38,4 +38,43 @@ The project includes a transformer-based model, **TrOCR** (Text Recognition Opti
    # Load the pre-trained TrOCR model and processor
    processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-printed")
    model = VisionEncoderDecoderModel.from_pretrained("microsoft/trocr-base-printed")
+   ```
 
+This model helps recognize text directly from the CAPTCHA images, providing a robust OCR solution.
+
+### 5. Testing and Fine-Tuning
+
+The final section of the notebook tests the extraction functions and applies fine-tuning parameters to adjust the cropping dimensions as needed.
+
+## Requirements
+
+- **Python Libraries**: 
+  - `selenium`
+  - `requests`
+  - `beautifulsoup4`
+  - `pillow`
+  - `transformers` (for TrOCR model)
+- **ChromeDriver** for Selenium (Ensure it’s compatible with your Chrome browser version)
+
+Install the required libraries with:
+
+```bash
+pip install selenium requests beautifulsoup4 pillow transformers
+```
+
+## Usage
+
+Run each cell in sequence to:
+1. Configure the web driver.
+2. Navigate to a webpage and extract CAPTCHA images.
+3. Save full-page screenshots and crop to desired dimensions.
+4. Recognize text from CAPTCHA images using TrOCR.
+
+## Notes
+
+- Ensure that **ChromeDriver** is installed and properly set up.
+- Adjust the cropping values in the notebook’s test cells as needed to align with the target CAPTCHA position.
+
+## License
+
+This project is open-source under the MIT License.
