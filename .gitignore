@@ -28,3 +28,5 @@ cache/
 
 # ignore virtual environment
 web/
+venv/
+.venv/
