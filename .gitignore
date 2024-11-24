@@ -33,3 +33,8 @@ cache/
 web/
 venv/
 .venv/
+
+# Ignore the brouillon file
+brouillon.ipynb
+
+# Ignore the collected static files
